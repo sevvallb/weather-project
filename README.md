@@ -27,8 +27,8 @@ pip install requests
    
 2.⁠ ⁠*Clone the Repository*
 ⁠ sh
-git clone https://github.com/yourusername/weather-recommendation-bot.git
-cd weather-recommendation-bot
+git clone https://github.com/sevvallb/weather-project.git
+cd weather-project
  ⁠
 
 3.⁠ ⁠*Add Your API Key*
@@ -39,7 +39,7 @@ API_KEY = "your_api_key"
 
 4.⁠ ⁠*Run the Script*
 ⁠ sh
-python weather_bot.py
+python main.py
  ⁠
 
 5.⁠ ⁠*Enter a City Name and Get Recommendations*
@@ -54,9 +54,6 @@ Recommendation: Wear light clothes and don't forget your sunglasses!
 •⁠  ⁠Integration with Telegram and Discord bots.
 •⁠  ⁠More detailed weather analysis.
 •⁠  ⁠Saving and viewing past weather data.
-
-## 📜 License
-This project is licensed under the MIT License. See the ⁠ LICENSE ⁠ file for more details.
 
 ## 👨‍💻 Contributing
 Feel free to submit a Pull Request (PR) for any improvements. For any issues, open an Issue!
