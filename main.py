@@ -24,7 +24,7 @@ class weatherApp:
             elif float(self.temperature) < 10:
                 print("You need to take your coat and umbrella")
                 
-        if "sun" in self.weather:
+        elif "sun" in self.weather:
             if float(self.temperature) > 20.0 :
                 print("You can wear your shorts and sun glasses")
             elif 10 < float(self.temperature) < 20.0:
@@ -32,7 +32,7 @@ class weatherApp:
             elif float(self.temperature) < 10:
                 print("You can take your trench coat")
                 
-        if "snow" in self.weather:
+        elif "snow" in self.weather:
             if float(self.temperature) > 20.0 :
                 print("You can wear your jacket.")
             elif 10 < float(self.temperature) < 20.0:
@@ -40,7 +40,7 @@ class weatherApp:
             elif float(self.temperature) < 10:
                 print("You need to take your coat and boots")
         
-        if "cloud" in self.weather:
+        elif "cloud" in self.weather:
             if float(self.temperature) > 20.0 :
                 print("You can wear your shirt")
             elif 10 < float(self.temperature) < 20.0:
