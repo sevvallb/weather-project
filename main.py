@@ -14,17 +14,53 @@ class weatherApp:
     
     def display_weather(self):    
         print(f"Today, {self.city} is {self.weather} , {self.temperature} degree celcius")
+        
+    def clothes_suggest(self):
+        if "rain" in self.weather:
+            if float(self.temperature) > 20.0 :
+                print("You need to take your umbrella and you can wear your t-shirt")
+            elif 10 < float(self.temperature) < 20.0:
+                print("You need to take your jacket and umbrella")
+            elif float(self.temperature) < 10:
+                print("You need to take your coat and umbrella")
+                
+        elif "sun" in self.weather:
+            if float(self.temperature) > 20.0 :
+                print("You can wear your shorts and sun glasses")
+            elif 10 < float(self.temperature) < 20.0:
+                print("You can wear your denim jacket and sun glasses")
+            elif float(self.temperature) < 10:
+                print("You can take your trench coat")
+                
+        elif "snow" in self.weather:
+            if float(self.temperature) > 20.0 :
+                print("You can wear your jacket.")
+            elif 10 < float(self.temperature) < 20.0:
+                print("You can wear your trench coat")
+            elif float(self.temperature) < 10:
+                print("You need to take your coat and boots")
+        
+        elif "cloud" in self.weather:
+            if float(self.temperature) > 20.0 :
+                print("You can wear your shirt")
+            elif 10 < float(self.temperature) < 20.0:
+                print("You can wear your trench coat")
+            elif float(self.temperature) < 10:
+                print("You need to take your coat")
+         
 
     def main(self):
         self.get_weather()
         self.display_weather()
-
-
-
+        self.clothes_suggest()
+        
+    
 if __name__ == "__main__":
     city = input("Enter the city: ")
     wA = weatherApp(city)
     wA.main()
-        
+      
+      
+  
         
     
