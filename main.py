@@ -1,24 +1,29 @@
 import requests
 
 class weatherApp:
-    def __init__(self):
-        self.city = input("Enter the city: ")
+    def __init__(self, city):
+        self.city = city
         self.apiKey = "59f90efbb6009c6032689d23ad946c3c"
         self.url = f"http://api.openweathermap.org/data/2.5/weather?q={self.city}&appid={self.apiKey}&units=metric&lang=eng"
 
-        
-    def main(self):
+    def get_weather(self):   
         self.cevap = requests.get(self.url)  
         self.data = self.cevap.json()
         self.temperature = self.data["main"]["temp"]
         self.weather = self.data["weather"][0]["description"]
-        
+    
+    def display_weather(self):    
         print(f"Today, {self.city} is {self.weather} , {self.temperature} degree celcius")
-        
-        
-        
+
+    def main(self):
+        self.get_weather()
+        self.display_weather()
+
+
+
 if __name__ == "__main__":
-    wA = weatherApp()
+    city = input("Enter the city: ")
+    wA = weatherApp(city)
     wA.main()
         
         
